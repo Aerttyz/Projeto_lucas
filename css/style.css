@@ -5,14 +5,18 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    
+    
 }
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ecf0f1;
+    background-image: url('https://www.toppapeldeparede.com.br/wp-content/uploads/2021/04/HD-wallpaper-music-musical.jpg');
+    background-repeat: no-repeat;
+    
+    
 }
 .content {
     background-color: #fff;
@@ -26,7 +30,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #58af9b;
+    background-color: #acaa50;
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
