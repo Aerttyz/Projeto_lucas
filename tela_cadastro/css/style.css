@@ -26,56 +26,58 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    border: 1px solid black;
 }
 .content::before {
     content: "";
     position: absolute;
     background-color: #acaa50;
-    width: 40%;
+    width: 45%;
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    border: 1px solid black;
 
 
     left: 0;
 }
 .title {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: bolder;
     text-transform: capitalize;
 }
 .title-primary {
     color: #fff;
 }
 .title-second {
-    color: #58af9b;
+    color: #000000;
 }
 .description {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 20px;
 }
 .description-primary {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 .description-second {
-    color: #7f8c8d;
+    color: #000000;
 }
 .btn {
     border-radius: 15px;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     font-size: 10px;
     padding: 10px 50px;
     cursor: pointer;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
     align-self: center;
     border: none;
     margin-top: 1rem;
 }
 .btn-primary {
-    background-color: transparent;
+    background-color: #acaa50;
     border: 1px solid #fff;
     transition: background-color .5s;
 }
@@ -83,10 +85,17 @@ body {
     background-color: #fff;
     color: #58af9b;
 }
+
 .btn-second {
-    background-color: #58af9b;
-    border: 1px solid #58af9b;
+    background-color: #acaa50;
+    border: 1px solid #acaa50;
     transition: background-color .5s;
+}
+.cad{
+    background-color: white;
+    border: 1px solid #ffffff;
+    transition : background-color .5s;
+    color: #acaa50;
 }
 .btn-second:hover {
     background-color: #fff;
@@ -129,18 +138,18 @@ body {
     list-style-type: none;
 }
 .item-social-media {
-    border: 1px solid #bdc3c7;
+    border: 1px solid #000000;
     border-radius: 50%;
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
-    color: #95a5a6;
+    color: #000000;
 }
 .form {
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 70%;
 }
 .form input {
     height: 45px;
@@ -371,6 +380,11 @@ input:-webkit-autofill
         height: 40%;
         top: 0;
         border-radius: 0;
+        border: none;
+    }
+    .cad{
+        background-color: #acaa50;
+        color: #fff;
     }
     .first-content, .second-content {
         flex-direction: column;
