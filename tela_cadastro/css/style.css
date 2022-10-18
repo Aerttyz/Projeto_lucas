@@ -8,12 +8,18 @@ body {
     
     
 }
+.login-column{
+}
+.login-column .title-second, .login-column .item-social-media, .login-column .description-second {
+    color: #fff !important;
+    border-color: #fff;
+}
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://www.toppapeldeparede.com.br/wp-content/uploads/2021/04/HD-wallpaper-music-musical.jpg');
+    background-image: linear-gradient(rgb(1,1,1,50%),rgb(1,1,1,50%)), url('https://www.toppapeldeparede.com.br/wp-content/uploads/2021/04/HD-wallpaper-music-musical.jpg');
     background-repeat: no-repeat;
     
     
@@ -31,7 +37,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #acaa50;
+    background-color: #7c7c5b;
     width: 45%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -77,7 +83,7 @@ body {
     margin-top: 1rem;
 }
 .btn-primary {
-    background-color: #acaa50;
+    background-color: #474721;
     border: 1px solid #fff;
     transition: background-color .5s;
 }
@@ -87,8 +93,8 @@ body {
 }
 
 .btn-second {
-    background-color: #acaa50;
-    border: 1px solid #acaa50;
+    background-color: #7c7c5b;
+    border: 1px solid #7c7c5b;
     transition: background-color .5s;
 }
 .cad{
