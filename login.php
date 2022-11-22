@@ -37,7 +37,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
 
       echo"<script language='javascript' type='text/javascript'>
         alert('Login realizado com sucesso!');window.location
-        .href='./telas/tela_base1/telabase.html';</script>";
+        .href='./telas/partitura/partitura.html';</script>";
         die();
     } else {
       echo "Falha ao logar! E-mail ou senha incorretos";
