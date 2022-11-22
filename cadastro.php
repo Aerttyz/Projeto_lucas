@@ -1,9 +1,56 @@
 <?php
+include('conexao.php');
 
-$login = $_POST['login'];
-$senha = MD5($_POST['senha']);
-$nome = MD5($_POST['nome']);
+if(isset($_POST['email']) || isset($_POST['senha'])){
 
+  $email = $_POST['email'];
+  $senha = MD5($_POST['senha']);
+  $nome = $_POST['nome'];
+
+  if(strlen($email)==0){
+    echo "Preencha seu e-mail";
+  } else if (strlen($senha)==0){
+    echo "Preencha sua senha";
+  } else {
+    $email = $mysqli->real_escape_string($_POST['email']);
+
+    $sql_code = "INSERT INTO `users`(`email`, `senha`, `nome`) VALUES ('$email','$senha','$nome')";
+    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código: " . $mysqli->error);
+  
+    $result = $sql_query;
+
+    print_r($result);
+
+    if($result=='1'){
+      echo"<script language='javascript' type='text/javascript'>
+        alert('Cadastro realizado com sucesso!');window.location
+        .href='index.html';</script>";
+        die();
+    } else {
+      echo"<script language='javascript' type='text/javascript'>
+        alert('Houve um erro durante o cadastro');window.location
+        .href='index.html';</script>";
+        die();
+    }
+
+    /*if($quantidade == 1){
+      $usuario = $sql_query->fetch_assoc();
+
+      if(!isset($_SESSION)) {
+        session_start();
+      }
+
+      $_SESSION['user'] = $usuario['id'];
+      $_SESSION['name'] = $usuario['nome'];
+    } else {
+      echo "Falha ao cadastrar!";
+    }*/
+  }
+}
+
+/*
+
+$mysqli = new mysqli()
 $connect = mysqli_connect('localhost','root','','db');
 
 if(!$connect) {
@@ -40,8 +87,8 @@ $logarray = $array['login'];
           alert('$insert')";
           /* echo"<script language='javascript' type='text/javascript'>
           alert('Não foi possível cadastrar esse usuário');window.location
-          .href='index.html'</script>"; */
+          .href='index.html'</script>"; 
         }
       }
-    }
+    } */
 ?>
