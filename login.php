@@ -38,13 +38,13 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
       echo"<script language='javascript' type='text/javascript'>
         alert('Login realizado com sucesso!');window.location
         .href='./telas/partitura/partitura.html';</script>";
-        die();
+      header('location:telas/partitura/partitura.html');
     } else {
       echo "Falha ao logar! E-mail ou senha incorretos";
       echo"<script language='javascript' type='text/javascript'>
         alert('Login e/ou senha incorretos');window.location
         .href='index.html';</script>";
-        die();
+      die();
     }
   }
 }

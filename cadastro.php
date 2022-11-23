@@ -7,6 +7,18 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
   $senha = MD5($_POST['senha']);
   $nome = $_POST['nome'];
 
+  
+  $sql_code = "SELECT * FROM `users` WHERE email = '$email' and senha = '$senha'";
+  $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código: " . $mysqli->error);
+  $quantidade = $sql_query->num_rows;
+
+  if($quantidade>0){
+    echo"<script language='javascript' type='text/javascript'>
+        alert('Já há um usuário cadastrado com esse email');window.location
+        .href='index.php';</script>";
+    die();
+  }
+
   if(strlen($email)==0){
     echo "Preencha seu e-mail";
   } else if (strlen($senha)==0){
@@ -19,17 +31,15 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
   
     $result = $sql_query;
 
-    print_r($result);
-
     if($result=='1'){
       echo"<script language='javascript' type='text/javascript'>
         alert('Cadastro realizado com sucesso!');window.location
-        .href='index.html';</script>";
+        .href='index.php';</script>";
         die();
     } else {
       echo"<script language='javascript' type='text/javascript'>
         alert('Houve um erro durante o cadastro');window.location
-        .href='index.html';</script>";
+        .href='index.php';</script>";
         die();
     }
 
