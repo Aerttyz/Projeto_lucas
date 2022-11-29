@@ -43,7 +43,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
       echo "Falha ao logar! E-mail ou senha incorretos";
       echo"<script language='javascript' type='text/javascript'>
         alert('Login e/ou senha incorretos');window.location
-        .href='index.html';</script>";
+        .href='index.php';</script>";
       die();
     }
   }
