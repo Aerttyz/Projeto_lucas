@@ -66,3 +66,11 @@
     background-color: rgb(226, 223, 223);
     padding: 30px;
   }
+
+  #partituraContainer {
+    width: 80%;
+    min-height: 50vh;
+    background-color: rgb(216, 216, 216);
+    margin: auto;
+    margin-top: 50px;
+  }
