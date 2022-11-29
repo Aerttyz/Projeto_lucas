@@ -35,3 +35,34 @@
   footer p {
     margin-bottom: .25rem;
   }
+
+  .botaoNotasImg {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .botaoNotas {
+    width: 50px;
+    height: 50px;
+  }
+
+  .botaoNotas:hover {
+    width: 55px;
+    height: 55px;
+  }
+
+  .botaoNotas:active {
+    background-color: rgba(128, 128, 128, 0.438);
+    box-shadow: 1px 1px 5px #5b5b5b, -1px -1px 5px #000, inset 1px 1px 5px #5b5b5b, inset -1px -1px 5px #000;
+  }
+
+  .botaoNotasContainer {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    width: 100%;
+    background-color: rgb(226, 223, 223);
+    padding: 30px;
+  }
