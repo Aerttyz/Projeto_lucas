@@ -67,22 +67,22 @@
     <section class="section text-center">
       <div class="container botaoNotasContainer">
         <!--<button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/semibreve.png" /></button>-->
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/minima.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/seminima.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/colcheia.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/semicolcheia.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/fusa.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/semifusa.png" /></button>
+        <!--<button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/minima.png" /></button>-->
+        <button class="botaoNotas" onclick="handleClick('Seminima', false)"><img class="botaoNotasImg" src="../../simbolos/notas/seminima.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Colcheia', false)"><img class="botaoNotasImg" src="../../simbolos/notas/colcheia.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Semicolcheia', false)"><img class="botaoNotasImg" src="../../simbolos/notas/semicolcheia.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Fusa', false)"><img class="botaoNotasImg" src="../../simbolos/notas/fusa.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Semifusa', false)"><img class="botaoNotasImg" src="../../simbolos/notas/semifusa.png" /></button>
       </div>
       <div class="container botaoNotasContainer">
         <!-- <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/Pausas/" /></button> -->
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/notas/minima.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/Pausas/PausaSeminima.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/Pausas/PausaColcheia.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg"
-            src="../../simbolos/Pausas/PausaSemicolcheia.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/Pausas/PausaFusa.png" /></button>
-        <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/Pausas/PausaSemifusa.png" /></button>
+        <!-- <button class="botaoNotas"><img class="botaoNotasImg" src="../../simbolos/Pausas/minima.png" /></button> -->
+        <button class="botaoNotas" onclick="handleClick('Seminima', true)"><img class="botaoNotasImg" src="../../simbolos/Pausas/Seminima.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Colcheia', true)"><img class="botaoNotasImg" src="../../simbolos/Pausas/Colcheia.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Semicolcheia', true)"><img class="botaoNotasImg"
+            src="../../simbolos/Pausas/Semicolcheia.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Fusa', true)"><img class="botaoNotasImg" src="../../simbolos/Pausas/Fusa.png" /></button>
+        <button class="botaoNotas" onclick="handleClick('Semifusa', true)"><img class="botaoNotasImg" src="../../simbolos/Pausas/Semifusa.png" /></button>
       </div>
     </section>
     <div id="partituraContainer">
@@ -90,5 +90,5 @@
     </div>
   </main>
 </body>
-
+<script src="cadastro_partitura.js"></script>
 </html>
