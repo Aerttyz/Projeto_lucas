@@ -56,6 +56,11 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
       echo "Falha ao cadastrar!";
     }*/
   }
+} else {
+  echo"<script language='javascript' type='text/javascript'>
+        alert('Houve um erro durante o cadastro');window.location
+        .href='index.php';</script>";
+  die();
 }
 
 /*
