@@ -1,6 +1,7 @@
 <?php
 include('../../conexao.php');
 
+
 if (isset($_POST['pauta']) || isset($_POST['id'])) {
 
     $pauta = $_POST['pauta'];
