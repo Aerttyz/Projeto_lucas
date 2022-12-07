@@ -1,7 +1,16 @@
 :root {
     --jumbotron-padding-y: 3rem;
   }
-  
+  .exc:hover{
+    background-color: rgba(252, 7, 7, 0.705)!important;
+    
+  }
+  .edit:hover{
+    background-color: rgba(0, 132, 255, 0.733)!important;
+  }
+  .ver:hover{
+    background-color: rgba(9, 255, 0, 0.733)!important;
+  }
   .jumbotron {
     padding-top: var(--jumbotron-padding-y);
     padding-bottom: var(--jumbotron-padding-y);
