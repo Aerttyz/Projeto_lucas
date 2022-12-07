@@ -17,20 +17,20 @@ if (isset($_POST['descricao']) && isset($_POST['nome_partitura'])) {
     if ($result == '1') {
         echo "<script language='javascript' type='text/javascript'>
         alert('Cadastro realizado com sucesso!');window.location
-        .href='../cadastro_partitura/cadastro_partitura.html?id=$id';</script>";
+        .href='../cadastro_partitura/cadastro_partitura.php?id=$id';</script>";
         die();
     }
     else {
         echo "<script language='javascript' type='text/javascript'>
         alert('Houve um erro durante o cadastro');window.location
-        .href='../cadastro_partitura/cadastro_partitura.html?id=$id';</script>";
+        .href='../cadastro_partitura/cadastro_partitura.php?id=$id';</script>";
         die();
     }
 }
 else {
     echo "<script language='javascript' type='text/javascript'>
         alert('Informe o nome e a descrição');window.location
-        .href='../cadastro_partitura/cadastro_partitura.html?id=$id';</script>";
+        .href='../cadastro_partitura/cadastro_partitura.php?id=$id';</script>";
     die();
 }
 ?>
