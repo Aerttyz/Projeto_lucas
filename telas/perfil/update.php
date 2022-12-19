@@ -64,7 +64,7 @@ if (
             die('Falha na execução do código: ' . $mysqli->error);
         echo "<script language='javascript' type='text/javascript'>
           alert('UPDATE realizado com sucesso!');window.location
-          .href='./perfil.html';</script>";*/
+          .href='./perfil.html';</script>";
         header('location:perfil.html');
     } else {
         echo "<script language='javascript' type='text/javascript'>
