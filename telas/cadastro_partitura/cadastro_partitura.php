@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +25,24 @@
 
   <!-- Estilos customizados para este template -->
   <link href="album.css" rel="stylesheet">
+
+  <?php if (isset($_GET['id'])) {
+      include '../../conexao.php';
+
+      $id = $_GET['id'];
+
+      $sql_code = "SELECT * FROM `partituras` WHERE id = '$id'";
+      ($sql_query = $mysqli->query($sql_code)) or
+          die('Falha na execução do código: ' . $mysqli->error);
+      $quantidade = $sql_query->num_rows;
+      $partitura = $sql_query->fetch_assoc();
+
+      $pauta = $partitura['pauta'];
+  } else {
+      echo "<script language='javascript' type='text/javascript'>
+        alert('Id inválido');window.location
+        .href='../../index.php';</script>";
+  } ?>
 </head>
 <header>
   <div class="collapse bg-dark" id="navbarHeader">
@@ -42,7 +59,7 @@
           <ul class="list-unstyled">
             <li><a href="../perfil/perfil.html" class="text-white">Perfil</a></li>
             <li><a href="../../index.php" class="text-white">Fazer Logout</a></li>
-            <li><a href="../pre_partitura/pre_partitura.html" class="text-white">Cadastrar partituras</a></li>
+            <li><a href="../pre_partitura/pre_partitura.php" class="text-white">Cadastrar partituras</a></li>
           </ul>
         </div>
       </div>
@@ -50,7 +67,7 @@
   </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
-      <a href="../partitura/partitura.html" class="navbar-brand d-flex align-items-center">
+      <a href="../partitura/partitura.php" class="navbar-brand d-flex align-items-center">
 
         <strong>Musicales</strong>
       </a>
@@ -88,14 +105,13 @@
     <div id="partituraContainer">
       
     </div>
-    <div class="mt-5 text-center botaoSalvar"><button class="btn btn-primary profile-button" type="submit">Salvar</button></div>
+    <div id='botaoSalvar' class="mt-5 text-center botaoSalvar"><button class="btn btn-primary profile-button" type="submit">Salvar</button></div>
   </main>
 </body>
 <script src="cadastro_partitura.js"></script>
-<?php
-echo "<script type='text/JavaScript'> 
-defineNotas([{tempo: 'Semicolcheia', pausa: false},{tempo: 'Semicolcheia', pausa: false}]);
+<?php echo "<script type='text/JavaScript'> 
+defineId($id)
+defineNotas($pauta);
 renderizarPartitura();
-     </script>";
-?>
+     </script>"; ?>
 </html>
