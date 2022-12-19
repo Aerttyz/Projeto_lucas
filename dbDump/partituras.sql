@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 29-Nov-2022 às 17:31
--- Versão do servidor: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: Dec 19, 2022 at 03:57 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,33 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `partituras`
+-- Table structure for table `partituras`
 --
 
 CREATE TABLE `partituras` (
   `id` int(11) NOT NULL,
-  `pauta` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `users`
---
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(45) NOT NULL,
-  `senha` varchar(200) NOT NULL,
-  `email` varchar(200) NOT NULL
+  `pauta` text NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `descricao` varchar(2000) NOT NULL,
+  `imagem` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `users`
+-- Dumping data for table `partituras`
 --
 
-INSERT INTO `users` (`id`, `nome`, `senha`, `email`) VALUES
-(1, 'Thaua', 'ddab815526553043927dac9282d61e05', 'thaua@thaua.com');
+INSERT INTO `partituras` (`id`, `pauta`, `nome`, `descricao`, `imagem`) VALUES
+(10, '[{\"tempo\":\"Semicolcheia\",\"pausa\":true},{\"tempo\":\"Seminima\",\"pausa\":true},{\"tempo\":\"Seminima\",\"pausa\":true},{\"tempo\":\"Fusa\",\"pausa\":true},{\"tempo\":\"Semifusa\",\"pausa\":true},{\"tempo\":\"Semifusa\",\"pausa\":false},{\"tempo\":\"Semifusa\",\"pausa\":false},{\"tempo\":\"Semifusa\",\"pausa\":false},{\"tempo\":\"Semifusa\",\"pausa\":false},{\"tempo\":\"Semifusa\",\"pausa\":false}]', 'Moonlight sonata', 'dsa23213', '');
 
 --
 -- Indexes for dumped tables
@@ -62,13 +53,6 @@ ALTER TABLE `partituras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email_UNIQUE` (`email`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -76,12 +60,9 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `partituras`
 --
 ALTER TABLE `partituras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
