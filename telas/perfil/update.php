@@ -10,8 +10,8 @@ if (
 ) {
     $email = $mysqli->real_escape_string($_POST['email']);
     $nome = $_POST['nome'];
-    $senha = $_POST['senha'];
-    $senhaconfirma = $_POST['senhaconfirma'];
+    $senha = MD5($_POST['senha']);
+    $senhaconfirma = MD5($_POST['senhaconfirma']);
 
     if (!isset($_SESSION)) {
         session_start();

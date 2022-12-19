@@ -7,13 +7,14 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
   $email = $_POST['email'];
   $senha = MD5($_POST['senha']);
 
-  echo $email;
-  echo $senha;
-
   if(strlen($email)==0){
-    echo "Preencha seu e-mail";
+    echo"<script language='javascript' type='text/javascript'>
+        alert('Preencha seu Email!');window.location
+        .href='./index.php';</script>";
   } else if (strlen($senha)==0){
-    echo "Preencha sua senha";
+    echo"<script language='javascript' type='text/javascript'>
+        alert('Preencha sua senha!');window.location
+        .href='./index.php';</script>";
   } else {
     $email = $mysqli->real_escape_string($_POST['email']);
 

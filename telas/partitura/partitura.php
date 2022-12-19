@@ -36,7 +36,7 @@
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">Sobre</h4>
-              <p class="text-muted">Adicione alguma informação sobre o álbum abaixo (autor ou qualquer outro background). Faça essas informações terem algumas frases, para a galera ter algumas informações que besliscar. Além disso, use link nelas para as redes sociais ou informações de contato.</p>
+              <p class="text-muted">Você está no musicales, uma plataforma para cadastro e compartilhamento de partituras musicais, atualmente temos os serviços de criação de partituras e compartilhamento. Como ainda está em desenvolvimento, esperamos futuramente adicionar uma função para tocar os ritmos musicais de cada partitura</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Veja mais</h4>
@@ -81,13 +81,15 @@
                 $id = $row['id'];
                 $pauta = $row['pauta'];
                 $nome = $row['nome'];
+                
+                $imagem = $row['imagem'];
                 $descricao = $row['descricao'];
                 ?>
 
 
                 <div class='col-md-4'> 
                 <div class='card mb-4 shadow-sm'>
-                  <img class='card-img-top'  alt='Card image cap' src='http://www.forroemvinil.com/wp-content/uploads/2012/08/capa-cd1-620x616.jpg' data-holder-rendered='true'>
+                  <img class='card-img-top'  alt='Card image cap' src='<?php echo $imagem?>' data-holder-rendered='true'>
                   <div class='card-body'>
                     <p class='card-text'><h2><?php echo $nome?></h2> <?php echo $descricao?></p>
                     <div class='d-flex justify-content-between align-items-center'>

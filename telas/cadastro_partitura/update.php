@@ -3,7 +3,6 @@ include '../../conexao.php';
 
 if (isset($_POST['pauta']) && isset($_POST['id'])) {
     echo $id = $_POST['id'];
-    echo 'uepa';
 
     $pauta = $_POST['pauta'];
     $id = $_POST['id'];
@@ -35,7 +34,8 @@ if (isset($_POST['pauta']) && isset($_POST['id'])) {
     } else {
         echo $id;
         echo "<script language='javascript' type='text/javascript'>
-        alert('Partitura não encontrada');;</script>";
+        alert('Partitura não encontrada');window.location
+        .href='../partitura/partitura.php';</script>";
         die();
     }
 } else {
