@@ -4,7 +4,8 @@ include '../../conexao.php';
 
 if (
     ((isset($_POST['email']) && !empty($_POST['email'])) ||
-        (isset($_POST['senha']) && !empty($_POST['senha']))) &&
+        (isset($_POST['senha']) && !empty($_POST['senha'])) ||
+        (isset($_POST['nome']) && !empty($_POST['nome']))) &&
     (isset($_POST['senhaconfirma']) && !empty($_POST['senhaconfirma']))
 ) {
     $email = $mysqli->real_escape_string($_POST['email']);
@@ -65,7 +66,7 @@ if (
         echo "<script language='javascript' type='text/javascript'>
           alert('UPDATE realizado com sucesso!');window.location
           .href='./perfil.html';</script>";
-        header('location:perfil.html');
+        //header('location:perfil.html');
     } else {
         echo "<script language='javascript' type='text/javascript'>
         alert('Senha incorreta!');window.location
